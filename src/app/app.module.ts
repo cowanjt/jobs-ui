@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
-import { GoogleLoginProvider} from "angularx-social-login";
+import { GoogleLoginProvider } from "angularx-social-login";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +14,7 @@ let config = new AuthServiceConfig([
     provider: new GoogleLoginProvider("157430704294-9dvj1n9r1tnt27ikqvc5hnievicvqrb1.apps.googleusercontent.com")
   }
 ]);
- 
+
 export function provideConfig() {
   return config;
 }
@@ -30,10 +30,13 @@ export function provideConfig() {
     AppRoutingModule,
     SocialLoginModule,
   ],
-  providers: [{
-    provide: AuthServiceConfig,
-    useFactory: provideConfig
-  }],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig,
+    },
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

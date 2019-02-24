@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { AuthService, SocialUser } from "angularx-social-login";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Government Job Listings';
+  private title = 'Government Job Listings';
+
+  private user: SocialUser;
+  public loggedIn: boolean;
+
+  public constructor(private authService: AuthService, private titleService: Title) {
+  }
+
+  ngOnInit() {
+    this.setTitle(this.title);
+
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    });
+  }
+
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+  }
+
+  public signOut(): void {
+    this.authService.signOut();
+  }
 }

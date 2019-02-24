@@ -16,20 +16,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      this.user = user;
-      this.loggedIn = (user != null);
-    });
 
-    console.log(this.loggedIn);
   }
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
-
-  signOut(): void {
-    console.log(this.user);
-    this.authService.signOut();
   }
 }

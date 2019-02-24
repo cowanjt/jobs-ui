@@ -1,1 +1,6 @@
 <app-login></app-login>
+<br>
+<br>
+<div *ngIf=loggedIn>
+  <button (click)="signOut()">Sign Out</button>
+</div>
