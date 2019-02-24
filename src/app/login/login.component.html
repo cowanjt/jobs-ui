@@ -2,4 +2,6 @@
   login works!
 </p>
 <button (click)="signInWithGoogle()">Google Sign-In</button>
-<button (click)="signOut()">Sign Out</button>
+<div *ngIf=loggedIn>
+  <button (click)="signOut()">Sign Out</button>
+</div>
