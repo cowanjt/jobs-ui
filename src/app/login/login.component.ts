@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
       this.loggedIn = (user != null);
     });
 
-    console.log(this.user);
+    console.log(this.loggedIn);
   }
 
   signInWithGoogle(): void {
@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   signOut(): void {
+    console.log(this.user);
     this.authService.signOut();
   }
 }
