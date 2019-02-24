@@ -10,7 +10,7 @@ import { AuthService, GoogleLoginProvider, SocialUser  } from "angularx-social-l
 export class LoginComponent implements OnInit {
 
   private user: SocialUser;
-  private loggedIn: boolean;
+  public loggedIn: boolean;
 
   constructor(private authService: AuthService) {
   }
@@ -26,10 +26,5 @@ export class LoginComponent implements OnInit {
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
-
-  signOut(): void {
-    console.log(this.user);
-    this.authService.signOut();
   }
 }
