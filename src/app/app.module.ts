@@ -1,12 +1,15 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
-import { GoogleLoginProvider } from "angularx-social-login";
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angularx-social-login";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
+
+import { MatCheckboxModule, MatButtonModule } from '@angular/material';
 
 let config = new AuthServiceConfig([
   {
@@ -23,12 +26,16 @@ export function provideConfig() {
   declarations: [
     AppComponent,
     LoginComponent,
-    JobsListComponent
+    JobsListComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
     AppRoutingModule,
     SocialLoginModule,
+    MatCheckboxModule,
+    MatButtonModule,
   ],
   providers: [
     {
