@@ -11,7 +11,7 @@ import { JobsListComponent } from './jobs-list/jobs-list.component';
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider("57430704294-9dvj1n9r1tnt27ikqvc5hnievicvqrb1.apps.googleusercontent.com")
+    provider: new GoogleLoginProvider("157430704294-9dvj1n9r1tnt27ikqvc5hnievicvqrb1.apps.googleusercontent.com")
   }
 ]);
  
