@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService, SocialUser  } from "angularx-social-login";
 
 @Component({
   selector: 'app-root',
@@ -7,16 +6,5 @@ import { AuthService, SocialUser  } from "angularx-social-login";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'jobs-ui';
-
-  constructor(private authService: AuthService) {
-
-  }
-
-  signOut(): void {
-    this.authService.signOut();
-  }
-  
+  title = 'Government Job Listings';
 }
-
-
