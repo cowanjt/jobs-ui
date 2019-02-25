@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
 
-import { MatCheckboxModule, MatButtonModule } from '@angular/material';
+import { MatTooltipModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatCardModule, MatCheckboxModule, MatButtonModule } from '@angular/material';
 
 let config = new AuthServiceConfig([
   {
@@ -32,10 +32,15 @@ export function provideConfig() {
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     AppRoutingModule,
     SocialLoginModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatTooltipModule,
   ],
   providers: [
     {

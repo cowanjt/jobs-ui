@@ -19,7 +19,15 @@ export class LoginComponent implements OnInit {
 
   }
 
+  signIn(): void {
+    throw new Error("signIn() is not yet implmented.");
+  }
+
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
+  signInWithGithub(): void {
+    throw new Error("signInWithGithub() is not yet implmented.");
   }
 }

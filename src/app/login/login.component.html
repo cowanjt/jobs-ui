@@ -1,4 +1,53 @@
-<p>
-  login works!
-</p>
-<button mat-raised-button color="primary" (click)="signInWithGoogle()">Google Sign-In</button>
+<mat-grid-list cols="12" rowHeight="300px" gutterSize="5px">
+    <mat-grid-tile [colspan]="12" class="align-bottom">
+      <img src="../../favicon.png" class="text-center">
+    </mat-grid-tile>  
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="50px" gutterSize="5px">
+    <mat-grid-tile [colspan]="12">
+      <h1 class="text-center">Sign in to Jobs UI</h1>
+    </mat-grid-tile>  
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="200px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" class="align-bottom">
+    <mat-card class="sign-in-card">
+      <mat-card-content>
+        <form class="sign-in-form">
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Username">
+          </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Password">
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button disabled (click)="signIn()" 
+                class="w-100"
+                matTooltip="Sign in with local authentication"
+                aria-label="Button that displays a tooltip when focused or hovered over">Sign In</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="200px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" class="align-top">
+    <mat-card class="sign-in-card" style="padding-top: 8px">
+      <mat-card-actions class="py-0">
+        <button mat-raised-button color="primary" (click)="signInWithGoogle()" 
+                class="w-100"
+                matTooltip="Sign in with Google"
+                aria-label="Button that displays a tooltip when focused or hovered over"><span class="mdi mdi-google">Google</span></button>
+      </mat-card-actions>
+      <mat-card-actions class="py-0 mb-0">
+        <button mat-raised-button disabled (click)="signInWithGithub()" 
+                class="w-100 btn-white"
+                matTooltip="Sign in with Github"
+                aria-label="Button that displays a tooltip when focused or hovered over"><span class="mdi mdi-github-circle text-black">Github</span></button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

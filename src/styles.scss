@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+// Used for vertical alignment on login component
+.align-bottom > figure.mat-figure {
+    align-items: flex-end !important;
+}
+
+// Used for vertical alignment on login component
+.align-top > figure.mat-figure {
+    align-items: flex-start !important;
+}
