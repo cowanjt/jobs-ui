@@ -91,7 +91,7 @@
               "src/favicon.png",
               "src/assets",
               "src/assets/images",
-              "_redirects"
+              "src/_redirects"
             ]
           }
         },
