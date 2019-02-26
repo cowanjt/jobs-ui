@@ -1,4 +1,4 @@
-<mat-grid-list cols="12" rowHeight="150px" gutterSize="5px">
+<mat-grid-list cols="12" rowHeight="125px" gutterSize="5px">
     <mat-grid-tile [colspan]="12" class="align-bottom">
       <img src="../../favicon.png" class="text-center">
     </mat-grid-tile>  
@@ -33,7 +33,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list cols="12" rowHeight="200px" gutterSize="5px">
+<mat-grid-list cols="12" rowHeight="105px" gutterSize="5px">
   <mat-grid-tile [colspan]="12" class="align-top">
     <mat-card class="sign-in-card" style="padding-top: 8px">
       <mat-card-actions class="py-0">
@@ -48,6 +48,17 @@
                 matTooltip="Sign in with Github"
                 aria-label="Button that displays a tooltip when focused or hovered over"><span class="mdi mdi-github-circle text-black">Github</span></button>
       </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="12" rowHeight="200px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" class="align-top">
+    <mat-card class="sign-in-card">
+      <mat-card-content class="text-center">
+          <span>New to Jobs UI?</span>
+          <a mat-button color="primary" routerLink="/">Create an account.</a>
+      </mat-card-content>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
