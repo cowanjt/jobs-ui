@@ -90,7 +90,8 @@
             "assets": [
               "src/favicon.png",
               "src/assets",
-              "src/assets/images"
+              "src/assets/images",
+              "_redirects"
             ]
           }
         },
