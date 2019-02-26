@@ -8,7 +8,7 @@ import { AuthService, SocialUser } from "angularx-social-login";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  private title = 'Government Job Listings';
+  private title = 'Jobs UI';
 
   private user: SocialUser;
   public loggedIn: boolean;

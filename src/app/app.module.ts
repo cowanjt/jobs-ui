@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
 
 import { MatTooltipModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatCardModule, MatCheckboxModule, MatButtonModule } from '@angular/material';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 let config = new AuthServiceConfig([
   {
@@ -27,6 +28,7 @@ export function provideConfig() {
     AppComponent,
     LoginComponent,
     JobsListComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

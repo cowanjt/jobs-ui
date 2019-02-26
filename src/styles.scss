@@ -1,6 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
+h1, p {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Utility Classes
+.py-0 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.mt-0 {
+    margin-top: 0px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-white {
+    background-color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.mdi::before {
+    margin-right: 10px;
+}
+
 // Used for vertical alignment on login component
 .align-bottom > figure.mat-figure {
     align-items: flex-end !important;
