@@ -1,6 +1,6 @@
 <mat-grid-list cols="12" rowHeight="115px" gutterSize="5px">
     <mat-grid-tile [colspan]="12" class="align-bottom">
-      <img src="../../favicon.png" class="text-center">
+      <img src="../../assets/images/job-seeker.png" class="text-center">
     </mat-grid-tile>  
 </mat-grid-list>
 
@@ -33,20 +33,14 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list cols="12" rowHeight="105px" gutterSize="5px">
+<mat-grid-list cols="12" rowHeight="52px" gutterSize="5px">
   <mat-grid-tile [colspan]="12" class="align-top">
     <mat-card class="sign-in-card" style="padding-top: 8px">
       <mat-card-actions class="py-0">
-        <button mat-raised-button color="primary" (click)="signInWithGoogle()" 
-                class="w-100"
+        <button mat-raised-button (click)="signInWithGoogle()" 
+                class="w-100 btn-google"
                 matTooltip="Sign in with Google"
                 aria-label="Button that displays a tooltip when focused or hovered over"><span class="mdi mdi-google">Google</span></button>
-      </mat-card-actions>
-      <mat-card-actions class="py-0 mb-0">
-        <button mat-raised-button disabled (click)="signInWithGithub()" 
-                class="w-100 btn-white"
-                matTooltip="Sign in with Github"
-                aria-label="Button that displays a tooltip when focused or hovered over"><span class="mdi mdi-github-circle text-black">Github</span></button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

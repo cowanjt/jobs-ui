@@ -1,25 +1,26 @@
-<mat-grid-list cols="12" rowHeight="300px" gutterSize="5px">
-  <mat-grid-tile [colspan]="12" class="align-bottom">
-    <img src="../../assets/images/rick-and-morty.png" class="text-center">
+<mat-grid-list cols="12" rowHeight="280px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" [rowspan]="1">
+    <img src="../../assets/images/rick-and-morty.png" class="text-center" style="align-self: flex-end;">
   </mat-grid-tile>
 </mat-grid-list>
-
-<mat-grid-list cols="12" rowHeight="80px" gutterSize="5px">
-  <mat-grid-tile [colspan]="12">
-    <h1 class="text-center">404 Page Not Found</h1>
+<mat-grid-list cols="12" rowHeight="90px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" [rowspan]="1">
+    <h1 class="text-center my-0">404 Page Not Found</h1>
   </mat-grid-tile>
 </mat-grid-list>
-
-<mat-grid-list cols="6" rowHeight="80px" gutterSize="5px">
-  <mat-grid-tile [colspan]="6" class="align-top">
-    <p class="text-center mt-0 quote">
+<mat-grid-list cols="12" rowHeight="110px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" [rowspan]="1" class="align-top">
+    <p class="text-center my-0 quote">
       I don’t like it here Morty. I can’t abide bureaucracy.
       I don’t like being told where to go and what to do.
       I consider it a violation. Did you get those seeds all the way up your butt?
     </p>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="6" class="align-top">
-    <button mat-raised-button color="primary" (click)="goBack()" class="text-center" matTooltip="Navigate back to previous page"
-      aria-label="Button that navigates to previous page">Teleport Back</button>
+</mat-grid-list>
+<mat-grid-list cols="12" rowHeight="100px" gutterSize="5px">
+  <mat-grid-tile [colspan]="12" [rowspan]="1" class="align-top">
+    <button mat-raised-button color="primary" (click)="goBack()" class="text-center btn-back"
+      matTooltip="Navigate back to previous page" aria-label="Button that navigates to previous page">Teleport
+      Back</button>
   </mat-grid-tile>
 </mat-grid-list>

@@ -28,8 +28,4 @@ export class LoginComponent implements OnInit {
       console.log(user);
     });
   }
-
-  signInWithGithub(): void {
-    throw new Error("signInWithGithub() is not yet implmented.");
-  }
 }
