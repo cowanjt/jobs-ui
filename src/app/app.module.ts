@@ -2,7 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angularx-social-login";
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, LinkedInLoginProvider, FacebookLoginProvider } from "angularx-social-login";
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -19,6 +19,14 @@ let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider("157430704294-9dvj1n9r1tnt27ikqvc5hnievicvqrb1.apps.googleusercontent.com")
+  },
+  {
+    id: LinkedInLoginProvider.PROVIDER_ID,
+    provider: new LinkedInLoginProvider("86368w0xkhm6c0", false, 'en_US')
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider("275166550087592")
   }
 ]);
 

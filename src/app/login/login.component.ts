@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, GoogleLoginProvider, SocialUser  } from "angularx-social-login";
+import { AuthService, GoogleLoginProvider, LinkedInLoginProvider, FacebookLoginProvider, SocialUser  } from "angularx-social-login";
 
 
 @Component({
@@ -19,12 +19,24 @@ export class LoginComponent implements OnInit {
 
   }
 
-  signIn(): void {
+  signInWithLocal(): void {
     throw new Error("signIn() is not yet implmented.");
   }
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then((user) => {
+      console.log(user);
+    });
+  }
+
+  signInWithLinkedIn(): void {
+    this.authService.signIn(LinkedInLoginProvider.PROVIDER_ID).then((user) => {
+      console.log(user);
+    });
+  }
+
+  signInWithFacebook(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then((user) => {
       console.log(user);
     });
   }

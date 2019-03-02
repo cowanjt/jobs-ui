@@ -17,6 +17,19 @@ mat-grid-list {
     background-color: #ea4335;
 }
 
+.btn-facebook {
+    background-color: #4267b2;
+}
+
+.btn-linkedin {
+    background-color: #0077B5;
+}
+
+.registration-card {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
 .sign-in-card {
     @media (min-width: $break-xs) {
         min-width: 280px;

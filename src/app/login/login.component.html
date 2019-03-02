@@ -1,13 +1,13 @@
 <mat-grid-list cols="12" rowHeight="115px" gutterSize="5px">
-    <mat-grid-tile [colspan]="12" class="align-bottom">
-      <img src="../../assets/images/job-seeker.png" class="text-center">
-    </mat-grid-tile>  
+  <mat-grid-tile [colspan]="12" class="align-bottom">
+    <img src="../../assets/images/job-seeker.png" class="text-center">
+  </mat-grid-tile>
 </mat-grid-list>
 
 <mat-grid-list cols="12" rowHeight="50px" gutterSize="5px">
-    <mat-grid-tile [colspan]="12">
-      <h1 class="text-center">Sign in to Jobs UI</h1>
-    </mat-grid-tile>  
+  <mat-grid-tile [colspan]="12">
+    <h1 class="text-center">Sign in to Jobs UI</h1>
+  </mat-grid-tile>
 </mat-grid-list>
 
 <mat-grid-list cols="12" rowHeight="200px" gutterSize="5px">
@@ -23,24 +23,32 @@
           </mat-form-field>
         </form>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button disabled (click)="signIn()" 
-                class="w-100"
-                matTooltip="Sign in with local authentication"
-                aria-label="Button that displays a tooltip when focused or hovered over">Sign In</button>
+      <mat-card-actions class="py-0">
+        <button mat-raised-button disabled (click)="signInWithLocal()" class="w-100" matTooltip="Sign in with local authentication"
+          aria-label="Button that displays a tooltip when focused or hovered over">Sign In</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list cols="12" rowHeight="52px" gutterSize="5px">
+<mat-grid-list cols="12" rowHeight="160px" gutterSize="5px">
   <mat-grid-tile [colspan]="12" class="align-top">
     <mat-card class="sign-in-card" style="padding-top: 8px">
       <mat-card-actions class="py-0">
-        <button mat-raised-button (click)="signInWithGoogle()" 
-                class="w-100 btn-google"
-                matTooltip="Sign in with Google"
-                aria-label="Button that displays a tooltip when focused or hovered over"><span class="mdi mdi-google">Google</span></button>
+        <button mat-raised-button (click)="signInWithGoogle()" class="w-100 btn-google" matTooltip="Sign in with Google"
+          aria-label="Sign in with Google"><span class="mdi mdi-google"></span>
+          <span>Google</span>
+        </button>
+      </mat-card-actions>
+      <mat-card-actions class="py-0 mb-0">
+        <button mat-raised-button (click)="signInWithLinkedIn()" class="w-100 btn-linkedin" matTooltip="Sign in with LinkedIn"
+          aria-label="Sign in with LinkedIn"><span class="mdi mdi-linkedin">LinkedIn</span>
+        </button>
+      </mat-card-actions>
+      <mat-card-actions class="py-0 mb-0">
+        <button mat-raised-button (click)="signInWithFacebook()" class="w-100 btn-facebook" matTooltip="Sign in with Facebook"
+          aria-label="Sign in with Facebook"><span class="mdi mdi-facebook">Facebook</span>
+        </button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
@@ -48,10 +56,10 @@
 
 <mat-grid-list cols="12" rowHeight="200px" gutterSize="5px">
   <mat-grid-tile [colspan]="12" class="align-top">
-    <mat-card class="sign-in-card">
+    <mat-card class="sign-in-card registration-card">
       <mat-card-content class="text-center">
-          <span>New to Jobs UI?</span>
-          <a mat-button color="primary" routerLink="/user-registration">Create an account.</a>
+        <span>New to Jobs UI?</span>
+        <a mat-button color="primary" routerLink="/user-registration">Create an account.</a>
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>
